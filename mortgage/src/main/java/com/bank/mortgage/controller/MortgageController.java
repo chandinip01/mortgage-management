@@ -60,6 +60,12 @@ public class MortgageController {
 		return ResponseEntity.status(HttpStatus.OK).body(interestsMap);
 	}
 
+	/**
+	 * @param mortgageRequest
+	 * @return String
+	 * 
+	 */
+
 	@PostMapping("/mortgage-check")
 	ResponseEntity<String> checkMortgageEligibilty(@RequestBody MortgageCheck mortgageRequest) {
 		boolean eligible = mortgageService.checkMortgageEligibilty(mortgageRequest);
